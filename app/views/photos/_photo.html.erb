@@ -3,4 +3,8 @@
 <p>likes count: <%=photo.likes_count%> </p>
 <img src="<%=photo.url%>">
 <p>Created at: <%=photo.created_at%></p>
-<p>Upated at: <%=photo.updated_at%></p>
+<p>Upated at: <%=photo.updated_at%></p><br/>
+Comments: <% photo.comments.each do |comment| %>
+  Username: <%= comment.username %><br/>
+  Body: <%= comment.body %>
+<% end %>
